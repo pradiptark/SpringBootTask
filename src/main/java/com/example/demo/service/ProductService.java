@@ -29,7 +29,6 @@ public class ProductService {
 
     public List<ProductEntity> fetchByPrice(boolean isByPrice, long minPrice) {
         if (isByPrice){
-            if (minPrice < 0) minPrice = 0;
             return fetchUnderPrice(minPrice);
         }
         else {
